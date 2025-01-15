@@ -79,21 +79,21 @@ const SignupForm = () => {
               value={formData.password}
               required></input>
             <span onClick={() => setShowPassword((prev) => !prev)}>
-              {showPassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
+              {showpassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
             </span>
           </label>
 
           <label>
             <p>Confirm Password<sup>*</sup></p>
             <input
-              type={showpassword}
+              type={showpassword ? "text" : "password"}
               name='confirmPassword'
               onClick={changeHandler}
               placeholder='Enter Confirm Password'
               value={formData.confirmPassword}
               required></input>
             <span onClick={() => setShowPassword((prev) => !prev)}>
-              {showPassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
+              {showpassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
             </span>
           </label>
         </div>

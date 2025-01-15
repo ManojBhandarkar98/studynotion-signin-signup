@@ -1,8 +1,9 @@
 import React from 'react'
 import loginImg from "../assets/login.png"
+import Template from './Template'
 const Login = ({setIsLoggedIn}) => {
   return (
-    <template
+    <Template
       title='Welcome Back'
       desc1='Build skills for today, tommarow, and beyond.'
       desc2='Education to future-proof your career.'
