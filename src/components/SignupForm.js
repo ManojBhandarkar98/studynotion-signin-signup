@@ -3,6 +3,8 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
 
 const SignupForm = () => {
   const [showpassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -86,14 +88,14 @@ const SignupForm = () => {
           <label>
             <p>Confirm Password<sup>*</sup></p>
             <input
-              type={showpassword ? "text" : "password"}
+              type={showConfirmPassword ? "text" : "password"}
               name='confirmPassword'
               onClick={changeHandler}
               placeholder='Enter Confirm Password'
               defaultValue={formData.confirmPassword}
               required></input>
-            <span onClick={() => setShowPassword((prev) => !prev)}>
-              {showpassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
+            <span onClick={() => setShowConfirmPassword((prev) => !prev)}>
+              {showConfirmPassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
             </span>
           </label>
         </div>
