@@ -27,10 +27,7 @@ const Navbar = (props) => {
             <div className='flex ml-5 mr-3 gap-3'>
                 {!isLoggedIn &&
                     <Link to="/login" >
-                        <button onClick={()=>{
-                            /* setIsLoggedIn(true);
-                            toast.success('Logged In Succesfully') */
-                        }}>Login</button>
+                        <button>Login</button>
                     </Link>
                 }
                 {!isLoggedIn &&

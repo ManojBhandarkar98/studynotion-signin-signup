@@ -40,8 +40,8 @@ const SignupForm = () => {
               name='firstName'
               onClick={changeHandler}
               placeholder='Enter First Name'
-              value={formData.firstName}
-              required></input>
+              defaultValue={formData.firstName}
+              required />
           </label>
 
           <label>
@@ -51,7 +51,7 @@ const SignupForm = () => {
               name='lastName'
               onClick={changeHandler}
               placeholder='Enter Last Name'
-              value={formData.lastName}
+              defaultValue={formData.lastName}
               required></input>
           </label>
 
@@ -64,7 +64,7 @@ const SignupForm = () => {
             name='email'
             onClick={changeHandler}
             placeholder='Enter email address'
-            value={formData.email}
+            defaultValue={formData.email}
           ></input>
         </label>
         <div>
@@ -76,7 +76,7 @@ const SignupForm = () => {
               name='password'
               onClick={changeHandler}
               placeholder='Enter Password'
-              value={formData.password}
+              defaultValue={formData.password}
               required></input>
             <span onClick={() => setShowPassword((prev) => !prev)}>
               {showpassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
@@ -90,7 +90,7 @@ const SignupForm = () => {
               name='confirmPassword'
               onClick={changeHandler}
               placeholder='Enter Confirm Password'
-              value={formData.confirmPassword}
+              defaultValue={formData.confirmPassword}
               required></input>
             <span onClick={() => setShowPassword((prev) => !prev)}>
               {showpassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}

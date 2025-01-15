@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
+import toast from 'react-hot-toast';
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
-import { Link } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 
-const LoginForm = () => {
+const LoginForm = ({setIsLoggedIn}) => {
     const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
+
     const [forData, setFormData] = useState({
         email: "",
         password: ""
@@ -17,10 +20,17 @@ const LoginForm = () => {
             }
         ))
     }
+    
+    function submitHandler(event) {
+        event.preventDefault();
+        setIsLoggedIn(true);
+        toast.success('Logged In Succesfully');
+        navigate("/dashboard");
+    }
 
     return (
         <div>
-            <form>
+            <form onSubmit={submitHandler}>
                 <label>
                     <p>Email Adderess<sup>*</sup></p>
                     <input type='email' name='email' value={forData.email} onChange={changeHandler} placeholder='enter email address' required />
