@@ -45,12 +45,12 @@ const LoginForm = ({ setIsLoggedIn }) => {
                         {showPassword ? (<AiOutlineEyeInvisible fontSize={24} fill='#AFB2BF'/>) : (<AiOutlineEye fontSize={24} fill='#AFB2BF'/>)}
                     </span>
                     <Link to='#'>
-                        <p class="text-xs mt-1 text-blue-100 max-w-max ml-auto">
+                        <p className="text-xs mt-1 text-blue-100 max-w-max ml-auto">
                             Forgot Password
                         </p>
                     </Link>
                 </label>
-                <button class="bg-yellow-50 py-[8px] px-[12px] rounded-[8px] mt-6 font-medium text-richblack-900" type='submit'>Sign-In</button>
+                <button className="bg-yellow-50 py-[8px] px-[12px] rounded-[8px] mt-6 font-medium text-richblack-900" type='submit'>Sign-In</button>
             </form>
         </div >
     )
